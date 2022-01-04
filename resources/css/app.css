@@ -1,0 +1,14 @@
+:root{
+    --orange: #ef3b2d;
+    --dark-grey: #1a202c;
+    --mid-grey: #2d3748;
+    --light-grey: #aabdd0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Nunito, sans-serif;
+}

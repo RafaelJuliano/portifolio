@@ -24,9 +24,11 @@ class HomeController extends Controller
     public function index()
     {
 
-        $bio = \App\Models\Bio::find(1);
+        $bio = new \App\Models\Bio;
+        
+        $bioData = $bio->returnBio();
 
-        return view('home', compact('bio'));
+        return view('home', compact('bioData'));
 
     }
 }

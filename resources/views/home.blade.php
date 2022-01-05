@@ -2,7 +2,8 @@
 
 @section('content')
 <div class="container">
-    <p>{{ $bio->name }}</p>
+    
+    {{ dd($bioData) }}
 
 </div>
 @endsection

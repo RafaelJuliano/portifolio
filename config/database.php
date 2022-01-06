@@ -17,7 +17,7 @@ return [
     $DATABASE_URL = parse_url('postgres://lzkacvxeeztkll:f87167c5e2293a3018810fca3c9d196185920348fd5d606666708469b1652ce8@ec2-3-217-91-165.compute-1.amazonaws.com:5432/d1q7o7g2ptc61m'),
     
 
-    'default' => env('DB_CONNECTION', 'mysql'), //pgsql
+    'default' => env('DB_CONNECTION', 'pgsql'), //mysql
 
     /*
     |--------------------------------------------------------------------------

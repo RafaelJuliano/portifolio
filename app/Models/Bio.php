@@ -8,11 +8,13 @@ use Illuminate\Support\Facades\Http;
 
 class Bio extends Model
 {
-    protected $fillable = ['name', 'email', 'phone', 'about', 'linkedin', 'github', 'occupation'];
+    protected $fillable = ['name', 'email', 'phone', 'about', 'linkedin', 'github', 'occupation', 'location', 'avatar'];
+
+
 
     public function returnBio(){
         
-        $bio = $this->get()[0];
+        $bio = $this->first();
         $githubData = $this->getGithubData($bio->github);
 
         $bioData = [
@@ -25,10 +27,7 @@ class Bio extends Model
             'occupation' => $githubData->company,            
             'avatar' => $githubData->avatar_url,
             'location' => $githubData->location
-        ];
-        
-        
-        
+        ]; 
         return $bioData;     
     }
 

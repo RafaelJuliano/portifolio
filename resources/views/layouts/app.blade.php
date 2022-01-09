@@ -10,7 +10,7 @@
     <title>{{ 'Rafael Juliano' }}</title>
 
     <!-- Scripts -->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->

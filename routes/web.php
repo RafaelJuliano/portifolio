@@ -17,5 +17,11 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('bio', [App\Http\Controllers\BioController::class, 'index'])->name('bio');
-Route::post('bio', [App\Http\Controllers\BioController::class, 'updateBio'])->name('bio.update');
+
+Route::group(['middleware' => ['auth']], function() 
+{
+    Route::get('/bio', [App\Http\Controllers\BioController::class, 'index'])->name('bio');
+    Route::post('/bio',[App\Http\Controllers\BioController::class, 'updateBio'])->name('bio.update');
+});
+
+

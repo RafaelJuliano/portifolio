@@ -17,6 +17,7 @@ class Bio extends Model
         $bio = $this->first();
         $githubData = $this->getGithubData($bio->github);
         $about = $this->explodeBioAboutByParagraphs($bio->about);
+        $skills = Skill::all();
 
         $bioData = [
             'name' => $githubData->name,
@@ -28,7 +29,8 @@ class Bio extends Model
             'occupation' => $bio->occupation,
             'company' => $githubData->company,            
             'avatar' => $githubData->avatar_url,
-            'location' => $githubData->location
+            'location' => $githubData->location,
+            'skills' => $skills
         ]; 
         return $bioData;     
     }

@@ -17,7 +17,7 @@ class CreateSkillsTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('svgLink');
-            $table->string('description');        
+            $table->text('description');        
             $table->timestamps();
         });
     }

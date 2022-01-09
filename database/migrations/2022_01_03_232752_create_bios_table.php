@@ -20,7 +20,9 @@ class CreateBiosTable extends Migration
             $table->string('phone');  
             $table->string('occupation');                 
             $table->string('linkedin');
-            $table->string('github');  
+            $table->string('github');
+            $table->string('occupation')->nullable();
+            $table->text('about')->nullable();  
             $table->timestamps();
         });
     }

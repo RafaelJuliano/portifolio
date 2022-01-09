@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddOccupationColumnBios extends Migration
+class CreateSkillsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class AddOccupationColumnBios extends Migration
      */
     public function up()
     {
-        Schema::table('bios', function (Blueprint $table) {
-            $table->string('occupation')->nullable();;
-            $table->text('about')->nullable();
+        Schema::create('skills', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->text('svgLink');
+            $table->string('description');        
+            $table->timestamps();
         });
     }
 
@@ -26,9 +29,6 @@ class AddOccupationColumnBios extends Migration
      */
     public function down()
     {
-        Schema::table('bios', function (Blueprint $table) {
-            $table->dropColumn('occupation');
-            $table->dropColumn('about');  
-        });
+        Schema::dropIfExists('skills');
     }
 }

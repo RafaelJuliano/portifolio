@@ -5,7 +5,7 @@
 <div class="container dark">
     <div class='form-container'>
         <h1>Cadastro BIO</h1>
-        <form method="POST" action="{{ route('bio.update') }}">
+        <form method="POST" action="{{ secure_url(route('bio.update')) }}">
             {{ csrf_field() }}
             <label for="name">Nome</label>
             <input type="text" name="name" id="name" value="{{ $bio->name }}">

@@ -14,7 +14,7 @@ class AddOccupationColumnBios extends Migration
     public function up()
     {
         Schema::table('bios', function (Blueprint $table) {
-            $table->string('occupation');
+            $table->string('occupation')->nullable();;
             $table->text('about')->nullable();
         });
     }

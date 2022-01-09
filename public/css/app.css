@@ -1,11 +1,26 @@
-:root{
-    --orange: #ef3b2d;
-    --dark-grey: #1a202c;
-    --mid-grey: #2d3748;
-    --light-grey: #aabdd0;
+.dark{ 
+    --container-background: #0c0f14;
+    --side-backgroud: #141922;
+    --bio-backgroud: #141922;
+    --main-background: #141922;
+    --title-color: #f55247;
+    --text-color: #dedede;
+    --svg-color: #f55247;
+    --contrast: #f55247;
+    --shadow: rgba(0, 0, 0, 0.0);
+    --input: #262e3d;
+}
 
-    --side-backgroud: #1a202c;
-    
+.white{
+    --container-background: #e1ecff;
+    --side-backgroud: #fff;
+    --bio-backgroud: #141922;
+    --main-background: #fff;
+    --title-color: #f55247;
+    --text-color: #1f1f1f;
+    --svg-color: #f55247;
+    --contrast: #f55247;
+    --shadow: #494949;
 }
 
 * {
@@ -14,46 +29,184 @@
     border: 0;
     box-sizing: border-box;
     font-family: Nunito, sans-serif;
+    color: var(--text-color);
 }
 
-
-
-.side-container {
-    display: flex;
-    background: var(--side-backgroud);   
-    width: 20vw;
-    min-width: 20vw;       
+h1{
+    color: var(--title-color);
 }
 
-/* bio */
-
-.bio-container{
-    display: flex;
-    flex-direction: row;    
-    height: 30vh;  
+ul{
+    list-style: none;
 }
 
-.bio-side{
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.contrast{
+    color: var(--contrast);
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: bold;  
+}
+
+.subtitle{
+    font-size: 1.1rem;    
+}
+
+.space-bottom{
+    margin-bottom: 1rem;
+}
+
+.svg-container{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
-.avatar {
+svg{
+    fill: var(--svg-color);
+    margin: 5px;
+}
+
+p{
+    margin-bottom: 0.5rem;
+    text-align: justify;
+}
+
+/* EDIT BUTTON */
+
+.hover-display{
+    position: relative;
+}
+
+.hover-icon{
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: none;
+    
+}
+
+.hover-display:hover .hover-icon{
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+/* CONTAINERS */
+
+.container {
     display: flex;
-    width: 70%;
+    flex-direction: row;
+    background-color: var(--container-background);
+    padding: 1vw 2vw;
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+    
+}
+
+.side-container {
+    display: flex;
+    flex-direction: column;
+    background: var(--side-backgroud);   
+    width: 18vw;
+    min-width: 18vw;
+    margin-right: 1vw;    
+    padding: 1vw;
+    box-shadow: 0 0 6px var(--shadow);   
+}
+
+.main-container{
+    width: 77vw;
+    min-width: 77vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-background);
+    padding: 2vw; 
+    box-shadow: 0 0 6px var(--shadow); 
+}
+
+.avatar{
+    margin-bottom: 2rem;
 }
 
 .avatar img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    
 }
 
-/* body */
+.menu{
+    padding: 1rem;
+    border-bottom: 1px solid var(--contrast);
+    border-left: 1px solid var(--contrast);
+    border-color: grayscale(80%);
+    width: 100%;
+    background-color: var(--side-backgroud);
+    text-align: left;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.1s;
+}
 
-.body-container{
-    display: flex;    
-    min-height: 70vh;   
+.menu:hover{
+    background-color: var(--contrast);
+    transition: 0.3s;
+    color: #dedede;
+}
+
+.indentation{
+    padding: 1vw 5vw;
+    margin-bottom: 2vh;
+}
+
+
+/* FORM */
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50vw;
+    margin: 2vh auto;
+    padding: 1vw;
+    background-color: var(--side-backgroud);
+    box-shadow: 0 0 6px var(--shadow);
+    height: fit-content;
+}
+
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 70%;
+    padding: 1vw;
+    background-color: var(--main-background);
+    box-shadow: 0 0 6px var(--shadow);
+}
+
+
+input, textarea{
+    background-color: var(--input);
+    padding: 5px;
+    border-radius: 3px;
+    width: 100%;
+    margin: 5px 0 10px 0;
+    resize: vertical;
+}
+
+.submit, .cancel{
+    padding: 6px 15px;
+    cursor: pointer;
+    background-color: var(--contrast);
+    border-radius: 3px;
 }

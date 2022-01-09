@@ -7,9 +7,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ 'Rafael Juliano' }}</title>
 
     <!-- Scripts -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -23,7 +24,6 @@
 <body>
     <div id="app">
         
-
         <main class="py-4">
             @yield('content')
         </main>

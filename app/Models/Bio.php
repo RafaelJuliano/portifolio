@@ -16,15 +16,17 @@ class Bio extends Model
         
         $bio = $this->first();
         $githubData = $this->getGithubData($bio->github);
+        $about = $this->explodeBioAboutByParagraphs($bio->about);
 
         $bioData = [
             'name' => $githubData->name,
             'email' => $bio->email,
             'phone' => $bio->phone,
-            'about' => $githubData->bio,
+            'about' => $about,
             'linkedin' => $bio->linkedin,
             'github' => $githubData->html_url,
-            'occupation' => $githubData->company,            
+            'occupation' => $bio->occupation,
+            'company' => $githubData->company,            
             'avatar' => $githubData->avatar_url,
             'location' => $githubData->location
         ]; 
@@ -37,6 +39,19 @@ class Bio extends Model
 
         return $response->object();
     }
+
+    private function explodeBioAboutByParagraphs($bioAbout){
+        $paragraphs = explode("\n", $bioAbout);
+        $paragraphs = array_map(function($paragraph){
+            return trim($paragraph);
+        }, $paragraphs);
+        $paragraphs = array_filter($paragraphs, function($paragraph){
+            return !empty($paragraph);
+        });
+        return $paragraphs;
+    }
+
+   
 
     use HasFactory;
 }

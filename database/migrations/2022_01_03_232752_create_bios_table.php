@@ -17,7 +17,8 @@ class CreateBiosTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('phone');                   
+            $table->string('phone');  
+            $table->string('occupation');                 
             $table->string('linkedin');
             $table->string('github');  
             $table->timestamps();

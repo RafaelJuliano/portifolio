@@ -22,6 +22,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/experience.css') }}" rel="stylesheet">
     <link href="{{ asset('css/project.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/autofill.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/buttons.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/form.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/list.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/skill-list.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">

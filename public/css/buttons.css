@@ -1,0 +1,28 @@
+/* BUTTONS */
+
+.submit, .cancel, .edit, .delete{
+    padding: 6px 15px;
+    cursor: pointer;    
+    border-radius: 3px;
+    margin-right: 0.5vw;
+}
+
+.submit:hover, .cancel:hover, .edit:hover, .delete:hover{
+    filter:grayscale(20%);
+}
+
+.submit{
+    background-color: var(--submit);    
+}
+
+.cancel{
+    background-color: var(--cancel);
+}
+
+.edit{
+    background-color: var(--edit);
+}
+
+.delete{
+    background-color: var(--delete);
+}

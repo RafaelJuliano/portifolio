@@ -16,12 +16,25 @@ class SkillController extends Controller
     public function index()
     {
         $skills = \App\Models\Skill::all();
-        return view('skill.skills', compact('skills'));
+
+        if(!$skills)
+        {
+            return view('skills.addSkill');
+        }
+        else
+        {
+            return view('skills.skills', compact('skills'));
+        }        
     }
 
     public function skillDetails($id)
     {
-        $skill = \App\Models\Skill::find($id);
+        
+        $skill = \App\Models\Skill::find($id);   
+
+        if(!$skill){
+            abort(404, 'Skill not found');
+        }
         return view('skill.skillDetails', compact('skill'));
     }
 
@@ -35,24 +48,50 @@ class SkillController extends Controller
         $skill->name = $request->name;
         $skill->svgLink = $request->svgLink;
         $skill->description = $request->description;
-        $skill->save();
-        return redirect()->route('skills');
+
+        try {
+            $skill->save();
+            return redirect()->route('skills');
+        } catch (\Throwable $th) {
+            abort(500, 'Error saving skill');
+        }
+        
     }
 
     public function deleteSkill(Request $request)
     {
         $skill = \App\Models\Skill::find($request->id);
-        $skill->delete();
-        return redirect()->route('skills');
+
+        if(!$skill){
+            abort(404, 'Skill not found');
+        }
+
+        try {
+            $skill->delete();
+            return redirect()->route('skills');
+        } catch (\Throwable $th) {
+            abort(500, 'Error deleting skill');
+        }
+        
     }
 
     public function updateSkill(Request $request)
     {
         $skill = \App\Models\Skill::find($request->id);
+
+        if(!$skill){
+            abort(404, 'Skill not found');
+        }
+
         $skill->name = $request->name;
         $skill->svgLink = $request->svgLink;
         $skill->description = $request->description;
-        $skill->save();
-        return redirect()->route('skills');
+
+        try {
+            $skill->save();
+            return redirect()->route('skills');
+        } catch (\Throwable $th) {
+            abort(500, 'Error updating skill');
+        }
     }
 }

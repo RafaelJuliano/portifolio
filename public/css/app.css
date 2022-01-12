@@ -83,6 +83,10 @@ p.bio-paragraph{
     text-align: justify;
 }
 
+.bold{
+    font-weight: bold;
+}
+
 /* EDIT BUTTON */
 
 .hover-display{
@@ -109,7 +113,7 @@ p.bio-paragraph{
     display: flex;
     flex-direction: row;
     background-color: var(--container-background);
-    padding: 1vw 2vw;
+    padding: 1vw 1vw;
     width: 100%;
     min-height: 100vh;
     height: fit-content;
@@ -128,8 +132,8 @@ p.bio-paragraph{
 }
 
 .main-container{
-    width: 77vw;
-    min-width: 77vw;
+    width: 79vw;
+    min-width: 79vw;
     display: flex;
     flex-direction: column;
     background-color: var(--main-background);
@@ -169,7 +173,7 @@ p.bio-paragraph{
 
 .indentation{
     padding: 1vw 5vw;
-    margin-bottom: 2vh;
+    margin-bottom: 2vh;    
 }
 
 
@@ -264,6 +268,7 @@ select:-webkit-autofill:focus {
     justify-content: space-between;
     width: 80%;
     padding: 0 1vw;
+    margin-bottom: 1vh;
 }
 
 
@@ -296,6 +301,7 @@ select:-webkit-autofill:focus {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
 }
 
 .block-item{
@@ -321,4 +327,26 @@ select:-webkit-autofill:focus {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
+}
+
+.company{
+    font-weight: 600;
+    margin-right: 1vw;
+}
+
+.date-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; 
+    padding-left: 1.3rem;
+    margin-bottom: 0.5vh;   
+}
+
+.experience-date{
+    font-size: 0.9rem;
+}
+
+.experience-description{
+    padding-left: 1.3rem;
 }

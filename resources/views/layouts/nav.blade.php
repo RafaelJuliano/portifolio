@@ -32,10 +32,10 @@
     </ul>
     <nav>
         <ul>
-            <li><button class="menu" href="">Sobre</a></li>
-            <li><button class="menu" href="">Projetos</a></li>
-            <li><button class="menu" href="">Experiência</a></li>
-            <li><button class="menu" href="">Certificados</a></li>
+            <li><button class="menu" type="button" onclick="window.location.href='{{ route('home') }}'">Sobre</a></li>
+            <li><button class="menu" >Projetos</a></li>
+            <li><button class="menu" type="button" onclick="window.location.href='{{ route('experience') }}'">Experiência</a></li>
+            <li><button class="menu" >Certificados</a></li>
         </ul>
     </nav>
 </div>       

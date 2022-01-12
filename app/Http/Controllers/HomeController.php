@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-
+        
         $bio = new \App\Models\Bio;
         
         $bioData = $bio->returnBio();

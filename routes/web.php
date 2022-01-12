@@ -19,8 +19,12 @@ if (env('APP_ENV') === 'production') {
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', function () {
+    return(redirect()->route('home'));
+});
+
+Route::get('/sobre', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/experiencia', [App\Http\Controllers\ExperienceController::class, 'index'])->name('experience');
 
 Route::group(['middleware' => ['auth']], function() 
 {
@@ -33,6 +37,13 @@ Route::group(['middleware' => ['auth']], function()
     Route::get('/new/skill', [App\Http\Controllers\SkillController::class, 'openSkilladd'])->name('skill.new');
     Route::post('/skills/add', [App\Http\Controllers\SkillController::class, 'addNewSkill'])->name('skill.add');
     Route::put('/skills/{id}', [App\Http\Controllers\SkillController::class, 'updateSkill'])->name('skill.update');
+
+    Route::get('experiences', [App\Http\Controllers\ExperienceController::class, 'listExperiences'])->name('experiences');
+    Route::get('experiences/{id}', [App\Http\Controllers\ExperienceController::class, 'experienceDetails'])->name('experience.details');
+    Route::delete('experiences/{id}', [App\Http\Controllers\ExperienceController::class, 'deleteExperience'])->name('experience.delete');
+    Route::get('new/experience', [App\Http\Controllers\ExperienceController::class, 'openExperienceadd'])->name('experience.new');
+    Route::post('experiences/add', [App\Http\Controllers\ExperienceController::class, 'addNewExperience'])->name('experience.add');
+    Route::put('experiences/{id}', [App\Http\Controllers\ExperienceController::class, 'updateExperience'])->name('experience.update');
 });
 
 

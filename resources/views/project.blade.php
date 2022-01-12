@@ -54,7 +54,7 @@
                             @endif
                             <div class="project-skill-container">
                                 <hr>
-                                <p class="bold">Habilidades desenvolvidas:</p>
+                                <p class="skill-up">Habilidades desenvolvidas:</p>
                                 @foreach ($project['skilss'] as $skill)
                                     <span class="project-skill">{{ $skill }}</span>                                
                                 @endforeach  

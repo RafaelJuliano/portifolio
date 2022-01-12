@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: flex-start; 
     padding-left: 1.3rem;
-    margin-bottom: 0.5vh;   
+       
 }
 
 .experience-date{
@@ -17,5 +17,15 @@
 }
 
 .experience-description{
+    padding-left: 1.3rem;
+    margin-top: 1vh;
+}
+
+.description-bold{
+    font-weight: 600;
+}
+
+.experience-location{
+    font-size: 0.9rem;
     padding-left: 1.3rem;
 }

@@ -29,8 +29,9 @@
                                 Atual
                             @endif </p>
                     </div>
+                    <span class="experience-location">{{ $experience->location }}</span>
                     <div class="experience-description">
-                        <p><span class="bold">Descrição: </span>{{ $experience->description }}</p>
+                        <p><span class="description-bold">Descrição: </span>{{ $experience->description }}</p>
                     </div>
                     
                 </div>

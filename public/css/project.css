@@ -34,3 +34,7 @@
     background-color: var(--input);
     border-radius: 3px;
 }
+
+.skill-up{
+    font-weight: 600;
+}

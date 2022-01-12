@@ -33,7 +33,7 @@
     <nav>
         <ul>
             <li><button class="menu" type="button" onclick="window.location.href='{{ route('home') }}'">Sobre</a></li>
-            <li><button class="menu" >Projetos</a></li>
+            <li><button class="menu" type="button" onclick="window.location.href='{{ route('project') }}'">Projetos</a></li>
             <li><button class="menu" type="button" onclick="window.location.href='{{ route('experience') }}'">Experiência</a></li>
             <li><button class="menu" >Certificados</a></li>
         </ul>

@@ -25,6 +25,7 @@ Route::get('/', function () {
 
 Route::get('/sobre', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/experiencia', [App\Http\Controllers\ExperienceController::class, 'index'])->name('experience');
+Route::get('/projetos', [App\Http\Controllers\ProjectController::class, 'index'])->name('project');
 
 Route::group(['middleware' => ['auth']], function() 
 {
@@ -44,6 +45,14 @@ Route::group(['middleware' => ['auth']], function()
     Route::get('new/experience', [App\Http\Controllers\ExperienceController::class, 'openExperienceadd'])->name('experience.new');
     Route::post('experiences/add', [App\Http\Controllers\ExperienceController::class, 'addNewExperience'])->name('experience.add');
     Route::put('experiences/{id}', [App\Http\Controllers\ExperienceController::class, 'updateExperience'])->name('experience.update');
+
+    Route::get('projects', [App\Http\Controllers\ProjectController::class, 'listProjects'])->name('projects');
+    Route::get('projects/{id}', [App\Http\Controllers\ProjectController::class, 'projectDetails'])->name('project.details');
+    Route::delete('projects/{id}', [App\Http\Controllers\ProjectController::class, 'deleteProject'])->name('project.delete');
+    Route::get('new/project', [App\Http\Controllers\ProjectController::class, 'openProjectadd'])->name('project.new');
+    Route::post('projects/add', [App\Http\Controllers\ProjectController::class, 'addNewProject'])->name('project.add');
+    Route::put('projects/{id}', [App\Http\Controllers\ProjectController::class, 'updateProject'])->name('project.update');
+    
 });
 
 

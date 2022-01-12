@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ 'Rafael Juliano' }}</title>
+    <title>{{ 'Rafael Juliano Ferreira' }}</title>
 
     <!-- Scripts -->
     

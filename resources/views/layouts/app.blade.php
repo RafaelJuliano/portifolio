@@ -27,6 +27,7 @@
     <link href="{{ asset('css/form.css') }}" rel="stylesheet">
     <link href="{{ asset('css/list.css') }}" rel="stylesheet">
     <link href="{{ asset('css/skill-list.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/certificade.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">

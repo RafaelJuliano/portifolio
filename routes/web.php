@@ -26,6 +26,7 @@ Route::get('/', function () {
 Route::get('/sobre', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/experiencia', [App\Http\Controllers\ExperienceController::class, 'index'])->name('experience');
 Route::get('/projetos', [App\Http\Controllers\ProjectController::class, 'index'])->name('project');
+Route::get('/certificados', [App\Http\Controllers\CertificadeController::class, 'index'])->name('certificade');
 
 Route::group(['middleware' => ['auth']], function() 
 {
@@ -52,6 +53,13 @@ Route::group(['middleware' => ['auth']], function()
     Route::get('new/project', [App\Http\Controllers\ProjectController::class, 'openProjectadd'])->name('project.new');
     Route::post('projects/add', [App\Http\Controllers\ProjectController::class, 'addNewProject'])->name('project.add');
     Route::put('projects/{id}', [App\Http\Controllers\ProjectController::class, 'updateProject'])->name('project.update');
+
+    Route::get('certificades', [App\Http\Controllers\CertificadeController::class, 'listCertificades'])->name('certificades');
+    Route::get('certificades/{id}', [App\Http\Controllers\CertificadeController::class, 'certificadeDetails'])->name('certificade.details');
+    Route::delete('certificades/{id}', [App\Http\Controllers\CertificadeController::class, 'deleteCertificade'])->name('certificade.delete');
+    Route::get('new/certificade', [App\Http\Controllers\CertificadeController::class, 'openCertificadeadd'])->name('certificade.new');
+    Route::post('certificades/add', [App\Http\Controllers\CertificadeController::class, 'addNewCertificade'])->name('certificade.add');
+    Route::put('certificades/{id}', [App\Http\Controllers\CertificadeController::class, 'updateCertificade'])->name('certificade.update');
     
 });
 

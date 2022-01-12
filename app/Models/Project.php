@@ -17,7 +17,7 @@ class Project extends Model
 
     public function returnProjects()
     {
-        $projects = $this->all();
+        $projects = $this->orderBy('created_at', 'asc')->get();
         $projects = $this->explodeAllSkills($projects);
         return $projects;
     }

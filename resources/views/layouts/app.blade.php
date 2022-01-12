@@ -20,6 +20,8 @@
     <!-- Styles -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/experience.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/project.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">

@@ -16,21 +16,21 @@ class Bio extends Model
         
         try {
             $bio = $this->first();
-            //$githubData = $this->getGithubData($bio->github);
+            $githubData = $this->getGithubData($bio->github);
             $about = $this->explodeBioAboutByParagraphs($bio->about);
             $skills = Skill::orderBy('created_at', 'asc')->get();
 
             $bioData = [
-                'name' => 'Rafael', //$githubData->name
+                'name' => $githubData->name,
                 'email' => $bio->email,
                 'phone' => $bio->phone,
                 'about' => $about,
                 'linkedin' => $bio->linkedin,
-                'github' => 'github.com', //$githubData->html_url
+                'github' => $githubData->html_url,
                 'occupation' => $bio->occupation,
-                'company' => 'vhsys', //$githubData->company            
-                'avatar' => 'https://www.devmedia.com.br/imagens/fotoscolunistas/773667_20210210112029.jpg', //$githubData->avatar_url
-                'location' => 'São Paulo', //$githubData->location
+                'company' => $githubData->company,            
+                'avatar' => $githubData->avatar_url,
+                'location' => $githubData->location,
                 'skills' => $skills
             ]; 
             return $bioData;     

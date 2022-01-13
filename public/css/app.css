@@ -92,6 +92,10 @@ p.bio-paragraph{
     display: none;
 }
 
+#checkbox, #menu-label{
+    display: none;       
+}
+
 
 /* EDIT BUTTON */
 

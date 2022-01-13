@@ -10,9 +10,10 @@
     <div class="avatar">
         <img src="{{ $bioData['avatar'] }}" alt="Meu Avatar">
     </div>
-    <ul>
+    <ul class="main-data">
         <li class="contrast title">{{ $bioData['name'] }}</li>
-        <li class="subtitle space-bottom">{{ $bioData['occupation'] }}</li>
+        <li class="subtitle ">{{ $bioData['occupation'] }}</li>
+        <li class="space-bottom certificade-end">Em {{ $bioData['company'] }}</li>
         <li>{{ $bioData['email'] }}</li>
         <li>{{ $bioData['phone'] }}</li>
         <li class="space-bottom">{{ $bioData['location'] }}</li>
@@ -32,9 +33,12 @@
                 
             </li>                
     </ul>
+    <input type="checkbox" name="checkbox" id="checkbox">    
     <nav class="nav-bar">
-        <h1 class="nav-name">{{ $bioData['name'] }}</h1>
-        <ul class="nav-menu">
+        <label for="checkbox" id="menu-label"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
+        </label>
+        <h1 class="nav-name">{{ $bioData['name'] }}</h1>         
+        <ul class="nav-menu">            
             <li><button class="menu" type="button" onclick="window.location.href='{{ route('home') }}'">Sobre</a></li>
             <li><button class="menu" type="button" onclick="window.location.href='{{ route('project') }}'">Projetos</a></li>
             <li><button class="menu" type="button" onclick="window.location.href='{{ route('experience') }}'">Experiência</a></li>

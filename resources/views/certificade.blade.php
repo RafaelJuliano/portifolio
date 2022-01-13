@@ -28,13 +28,14 @@
             </div>
 
             <h2><span class="contrast"># </span>Certificados</h2>
-            <div class="indentation">
+            <div class="indentation block-list">
                 @foreach ($certificades as $certificade )
                     @if ($certificade->type == 'certificade')
                         <div class="certificade-container"> 
-                            <a href="{{ $certificade->url }}"><h3>{{ $certificade->name }} - [{{ $certificade->hours }}] horas</h3></a>
+                            <a href="{{ $certificade->url }}"><h3>{{ $certificade->name }}</h3></a>
+                            
                             <p class="contrast">{{ $certificade->institution }} </p> 
-                            <p class="certificade-end">Conclusão: {{ $certificade->end_date->format('m/Y') }}</p>   
+                            <p class="certificade-end">Conclusão: {{ $certificade->end_date->format('m/Y') }} - {{ $certificade->hours }} horas</p>   
                         </div>    
                     @endif                            
                 @endforeach

@@ -15,9 +15,9 @@
                 <label for="location">Endereço</label>
                 <input type="text" name="location" id="location" value="{{ $experience['location'] }}">
                 <label for="start_date">Data Inicio</label>
-                <input type="date" name="start_date" id="start_date" value="{{ $experience['start_date'] }}">
+                <input type="date" name="start_date" id="start_date" value="{{ $experience->start_date->format('Y-m-d') }}">
                 <label for="end_date">Data Fim</label>
-                <input type="date" name="end_date" id="end_date"  value="{{ $experience['end_date'] }}" >                   
+                <input type="date" name="end_date" id="end_date"  value="{{ $experience->end_date->format('Y-m-d') }}" >                   
               
                 <label for="description">Descrição</label>
                 <textarea rows="40" cols="33" name="description" id="description">{{ $experience['description'] }}</textarea>

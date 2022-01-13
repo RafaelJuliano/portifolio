@@ -1,0 +1,174 @@
+@media screen and (max-width: 1250px) {  
+    .container {
+        padding: 0;
+    }
+
+    .side-container {
+        width: 20vw;
+        min-width: 20vw;        
+    }
+
+    .main-container{
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 1100px) {  
+    .container {
+        flex-direction: column;
+        padding: 1vw;
+    }
+
+    .form-container, .list-container{
+        width: 80vw;
+    }
+
+    .form-container form, .list-item{
+        width: 90%;
+    }
+
+    .side-container {
+        flex-direction: row; 
+        width: 100%;
+        height: 30vh; 
+        margin-bottom: 1vw;
+        margin-top: 3.5rem;     
+    }
+
+    .main-container{
+        width: 100%;
+        min-height: 70vh;
+    }
+
+    .avatar{
+        margin-right: 2vw;
+    }
+
+    .nav-bar{        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;  
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background-color: var(--side-backgroud);
+        border-bottom: 1px solid var(--contrast); 
+        z-index: 1; 
+        padding: 0 2vw;    
+    }
+
+    .nav-menu{
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .nav-name{
+        display: block;
+    }
+
+    .menu{
+        border-bottom: none;        
+    }
+}
+
+@media screen and (max-width: 800px) {  
+    .block-item{
+        width: 30%;
+    }
+
+    .project-skill{
+        margin-bottom: 0.5vw;
+    }
+
+    .skill-up{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 675px) { 
+
+    .form-container, .list-container{
+        width: 98vw;
+        margin: 1vh auto;
+    }
+
+    .form-container form, .list-item{
+        width: 90%;
+    }
+
+    .list-item{
+        flex-direction: column;
+        border-bottom: 1px solid var(--input);
+        padding-bottom: 1vh;
+    }
+
+    .certificade-container{
+        width: 50%;
+    }
+
+    .block-item{
+        width: 100%;
+    }
+
+    .nav-name{
+        display: none;
+    }
+    .nav-bar{
+        padding: 0;
+    }
+
+    .side-container{
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+    }
+    .avatar{
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .container{
+        padding: 0;
+    }
+
+    .form-container, .list-container{
+        width: 100vw;
+        margin: 0;
+        flex-grow: 1;
+    }
+
+    .form-container form, .list-item{
+        width: 95%;
+    }
+
+    .certificade-container{
+        width: 100%;
+    }    
+    .menu{
+        padding: 1rem 0.7rem;
+    }
+    .project-container{
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .indentation{
+        padding: 1vw 0;
+    }
+}
+
+@media (hover: none) {
+    .hover-icon{
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+}

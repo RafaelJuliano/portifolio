@@ -21,7 +21,7 @@
                 <label for="hours">Horas de curso</label>
                 <input type="text" name="hours" id="hours" value="{{ $certificade['hours'] }}">
                 <label for="end_date">Data de conclusão</label>
-                <input type="date" name="end_date" id="end_date" value="{{ $certificade['end_date'] }}">
+                <input type="date" name="end_date" id="end_date" value="{{ $certificade->end_date->format('Y-m-d') }}">
                 <label for="url">Link certificado</label>
                 <input type="text" name="url" id="url" value="{{ $certificade['url'] }}">
                 <div class="button-container">                

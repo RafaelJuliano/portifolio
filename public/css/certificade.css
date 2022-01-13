@@ -1,7 +1,9 @@
 .certificade-container{
    margin-bottom: 2vh;
+   width: 30%;
 }
 
 .certificade-end{
     font-size: 0.8rem;
+    color: var(--text-color-dark);
 }

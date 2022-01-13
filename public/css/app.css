@@ -5,6 +5,7 @@
     --main-background: #141922;
     --title-color: #f55247;
     --text-color: #dedede;
+    --text-color-dark: #999;
     --svg-color: #f55247;
     --contrast: #f55247;
     --shadow: rgba(0, 0, 0, 0.0);
@@ -14,7 +15,7 @@
     --cancel: #262e3d;
     --edit: #5a7cb6;
     --delete: #f3291a;
-}
+    }
 
 .white{
     --container-background: #e1ecff;
@@ -85,6 +86,10 @@ p.bio-paragraph{
 
 .bold{
     font-weight: bold;
+}
+
+.nav-name{
+    display: none;
 }
 
 

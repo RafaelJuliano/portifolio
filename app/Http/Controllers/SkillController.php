@@ -19,11 +19,11 @@ class SkillController extends Controller
 
         if(!$skills)
         {
-            return view('skills.addSkill');
+            return view('skill.addSkill');
         }
         else
         {
-            return view('skills.skills', compact('skills'));
+            return view('skill.skills', compact('skills'));
         }        
     }
 

@@ -15,12 +15,9 @@ class BioController extends Controller
     public function index(){
         $bio = \App\Models\Bio::first();
 
-        if(!$bio){
-            return view('bio.addBio');
-        }
-        else{
-            return view('bio.bio', compact('bio'));
-        }       
+        
+        return view('bio', compact('bio'));
+              
     }
 
     public function updateBio(Request $request){

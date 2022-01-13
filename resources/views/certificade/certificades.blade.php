@@ -11,7 +11,7 @@
             @foreach ($certificades as $certificade)
                 <div class="list-item">
                     <h3>{{ $certificade->name }}</h3>
-                    <h3>{{ $certificade->institution }}</h3>
+                    
                     <div class='button-container'>
                         <form action="{{ route('certificade.details', $certificade['id'])}}" method="GET">                            
                             <button class="edit" >Editar</button>

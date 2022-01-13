@@ -32,8 +32,9 @@
                 
             </li>                
     </ul>
-    <nav>
-        <ul>
+    <nav class="nav-bar">
+        <h1 class="nav-name">{{ $bioData['name'] }}</h1>
+        <ul class="nav-menu">
             <li><button class="menu" type="button" onclick="window.location.href='{{ route('home') }}'">Sobre</a></li>
             <li><button class="menu" type="button" onclick="window.location.href='{{ route('project') }}'">Projetos</a></li>
             <li><button class="menu" type="button" onclick="window.location.href='{{ route('experience') }}'">Experiência</a></li>

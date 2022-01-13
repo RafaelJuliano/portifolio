@@ -22,6 +22,9 @@ Auth::routes();
 Route::get('/', function () {
     return(redirect()->route('home'));
 });
+Route::get('/home', function () {
+    return(redirect()->route('home'));
+});
 
 Route::get('/sobre', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/experiencia', [App\Http\Controllers\ExperienceController::class, 'index'])->name('experience');

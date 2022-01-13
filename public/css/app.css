@@ -138,8 +138,8 @@ p.bio-paragraph{
 }
 
 .main-container{
-    width: 79vw;
-    min-width: 79vw;
+    width: 100%;
+    ;
     display: flex;
     flex-direction: column;
     background-color: var(--main-background);

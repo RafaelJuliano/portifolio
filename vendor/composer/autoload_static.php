@@ -535,6 +535,7 @@ class ComposerStaticInit279610e67af62eeed4c4d472125e9d75
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\BioController' => __DIR__ . '/../..' . '/app/Http/Controllers/BioController.php',
+        'App\\Http\\Controllers\\CertificadeController' => __DIR__ . '/../..' . '/app/Http/Controllers/CertificadeController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\ExperienceController' => __DIR__ . '/../..' . '/app/Http/Controllers/ExperienceController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',

@@ -8,29 +8,28 @@ use Illuminate\Support\Facades\Http;
 
 class Bio extends Model
 {
-    protected $fillable = ['name', 'email', 'phone', 'about', 'linkedin', 'github', 'occupation', 'location', 'avatar'];
+    protected $fillable = ['name', 'email', 'phone', 'about', 'linkedin', 'github', 'occupation', 'location', 'avatar', 'company'];
 
 
 
     public function returnBio(){
         
         try {
-            $bio = $this->first();
-            $githubData = $this->getGithubData($bio->github);
+            $bio = $this->first();            
             $about = $this->explodeBioAboutByParagraphs($bio->about);
             $skills = Skill::orderBy('created_at', 'asc')->get();
 
             $bioData = [
-                'name' => $githubData->name,
+                'name' => $bio->name,
                 'email' => $bio->email,
                 'phone' => $bio->phone,
                 'about' => $about,
                 'linkedin' => $bio->linkedin,
-                'github' => $githubData->html_url,
+                'github' => $bio->github,
                 'occupation' => $bio->occupation,
-                'company' => $githubData->company,            
-                'avatar' => $githubData->avatar_url,
-                'location' => $githubData->location,
+                'company' => $bio->company,            
+                'avatar' => $bio->avatar,
+                'location' => $bio->location,
                 'skills' => $skills
             ]; 
             return $bioData;     
@@ -38,13 +37,6 @@ class Bio extends Model
             abort(500, 'Something went wrong');
         }
         
-    }
-
-    private function getGithubData($apiUrl){
-
-        $response = Http::get($apiUrl);
-
-        return $response->object();
     }
 
     private function explodeBioAboutByParagraphs($bioAbout){

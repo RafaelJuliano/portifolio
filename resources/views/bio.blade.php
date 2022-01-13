@@ -15,6 +15,12 @@
             <input type="text" name="phone" id="phone" value="{{ $bio->phone }}">
             <label for="occupation">Profissão</label>
             <input type="text" name="occupation" id="occupation" value="{{ $bio->occupation }}">
+            <label for="location">Endereço</label>
+            <input type="text" name="location" id="location" value="{{ $bio->location }}">
+            <label for="company">Empresa</label>
+            <input type="text" name="company" id="company" value="{{ $bio->company }}">
+            <label for ="avatar">Link Avatar</label>
+            <input type="text" name="avatar" id="avatar" value="{{ $bio->avatar }}">
             <label for="linkedin">Linkedin</label>
             <input type="text" name="linkedin" id="linkedin" value="{{ $bio->linkedin }}">
             <label for="github">Github</label>
